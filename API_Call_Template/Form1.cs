@@ -36,10 +36,10 @@ namespace API_Call_Template
 
             private void btnNASA_Click(object sender, EventArgs e)
             {
-                jsonString = client.DownloadString("https://api.nasa.gov/planetary/apod?api_key=YwNNIddOo87RYesGXGnMAQN8lv7Sd5mY2w20owsP&date=2018-07-09");
-                var apod = Apod.FromJson(jsonString);
+                jsonString = client.DownloadString("https://api.chucknorris.io/jokes/random");
+                 var chuckNorris = ChuckNorris.FromJson(jsonString);
 
-            picAPOD.Load(apod.Url);
+                MessageBox.Show(chuckNorris.Value);
 
             }
     }

@@ -36,6 +36,7 @@
         public static Apod FromJson(string json) => JsonConvert.DeserializeObject<Apod>(json, API_Call_Template.Converter.Settings);
     }
 
+    /*
     public static class Serialize
     {
         public static string ToJson(this Apod self) => JsonConvert.SerializeObject(self, API_Call_Template.Converter.Settings);
@@ -51,5 +52,5 @@
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
             },
         };
-    }
+    } */
 }
